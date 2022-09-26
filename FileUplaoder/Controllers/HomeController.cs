@@ -23,6 +23,12 @@ public class HomeController : Controller
         return View();
     }
 
+    //Get:: /Home/FileUplaod
+    public IActionResult FileUplaod()
+    {
+        return View();
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
