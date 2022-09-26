@@ -12,22 +12,22 @@ public class HomeController : Controller
     {
         _logger = logger;
     }
-
+    //Get:: / -> it will directly display fileuplaod page.
     public IActionResult Index()
     {
-        return View();
+        return View("FileUplaod");
     }
 
-    public IActionResult Privacy()
-    {
-        return View();
-    }
+    //public IActionResult Privacy()
+    //{
+    //    return View();
+    //}
 
     //Get:: /Home/FileUplaod
-    public IActionResult FileUplaod()
-    {
-        return View();
-    }
+    //public IActionResult FileUplaod()
+    //{
+    //    return View();
+    //}
 
     //Post:: /Home/FileUplaod
     [HttpPost]
