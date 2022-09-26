@@ -33,8 +33,17 @@ public class HomeController : Controller
     [HttpPost]
     public IActionResult FileUplaod(IFormFile file)
     {
-        Console.WriteLine("hello");
-        return RedirectToAction("Index");
+        if(file == null)
+        {
+            return View("Error");
+        }
+        
+        StreamReader st = new StreamReader(file.OpenReadStream()); //reading the file as a stream
+        string[] texts = st.ReadLine().Split("\n");
+        System.IO.File.AppendAllText("./master.txt", texts[0] + '\n');
+        st.Close(); //closing the stram to release used resources.
+        return View("Success");
+
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
