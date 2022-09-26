@@ -1,9 +1,5 @@
-﻿@page
-@{
-}
-
-<div class="text-center">
-    <form action="/">
+﻿<div class="text-center">
+    <form asp-action="FileUplaod" asp-method="post" enctype="multipart/form-data">
         <input type="file" id="file" accept=".txt" name="file" required>
         <input type="submit">
     </form>

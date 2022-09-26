@@ -29,6 +29,14 @@ public class HomeController : Controller
         return View();
     }
 
+    //Post:: /Home/FileUplaod
+    [HttpPost]
+    public IActionResult FileUplaod(IFormFile file)
+    {
+        Console.WriteLine("hello");
+        return RedirectToAction("Index");
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
