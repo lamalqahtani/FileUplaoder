@@ -16,3 +16,10 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.form-file {
+    width: 50%;
+}
+form {
+    text-align:center;
+}

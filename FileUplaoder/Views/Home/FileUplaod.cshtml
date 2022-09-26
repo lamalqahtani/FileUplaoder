@@ -1,7 +1,12 @@
 ﻿<div class="text-center">
+    <h2>Choose a text file to uplaod</h2>
     <form asp-action="FileUplaod" asp-method="post" enctype="multipart/form-data">
-        <input type="file" id="file" accept=".txt" name="file" required>
-        <input type="submit">
+        <div class="mb-3">
+            <input class="form-control form-file" type="file" id="file" accept=".txt" name="file" required/>
+        </div>
+        <div class="mb-3">
+            <input class="btn btn-dark" type="submit"/>
+        </div>
     </form>
 </div>
 
